@@ -1,0 +1,19 @@
+
+  {
+    "Header": {
+      "appTitle": "Clima de Next.js",
+       "navLinks": {
+             "week": "esta semana",
+             "about": "Acerca de"
+           }
+    },
+    "Home": {
+      "title": "El clima de hoy"
+    },
+    "week":{
+      "weekTitle": "el clima de esta semana."
+    },
+      "About": {
+        "about": "Nuestra aplicación del clima es una herramienta moderna diseñada para ofrecer actualizaciones meteorológicas precisas y oportunas en su idioma preferido. Construida con Next.js y utilizando el App Router y next-intl para traducciones fluidas, ofrece pronósticos en tiempo real y una interfaz amigable, soportando tanto inglés como español para una experiencia conveniente y personalizada de seguimiento del clima."
+      }
+  }

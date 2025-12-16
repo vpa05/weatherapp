@@ -1,0 +1,19 @@
+
+{
+    "Header": {
+      "appTitle": "Weather",
+       "navLinks": {
+             "week": "This week",
+             "about": "About"
+           }
+    },
+    "Home": {
+      "title": "Today's weather"
+    },
+    "week":{
+      "weekTitle": "This week's Weather."
+    },
+    "About": {
+      "about": "Our Weather App is a modern tool designed to provide accurate and timely weather updates in your preferred language. Built with Next.js and utilizing the App Router and next-intl for seamless translations, it offers real-time forecasts and a user-friendly interface, supporting both English and Spanish for a convenient and personalized weather-tracking experience."
+    }
+  }

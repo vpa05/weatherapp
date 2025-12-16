@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### Tailwind:
+- create tailwind.config.ts manually
+### Resolve globals.css import 
+- This is due to conflict in TS,  though Next.js know TS doesnt know what is .css file is as it doesnt know what is .css file is, so it throws an error "cannot find module"
+- By defining in global.d.ts file we are tellin TS that, if you  find any module with .css just import it .
 
-## Getting Started
+### Resolve tailwind usage:
+- npm install tailwindcss @tailwindcss/postcss postcss
+- @import "tailwindcss";
+- make sure tailwind.config has ` "./app/**/*.{js,ts,jsx,tsx,mdx}",`
 
-First, run the development server:
+### install and configure next-intl
+- npm install next-intl
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Steps:
+1. create dynamix [locale] route under app/[locale] and move all the routes inside this dynamic route including main layout.tsx and page.tsx file
+2. configure next.config.ts file to use `withNextIntl`
+3. create a new file called i18n.config.ts
+4. next-intl uses a special i18n.ts configuration file to load translations
